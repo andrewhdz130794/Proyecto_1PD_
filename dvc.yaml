@@ -1,0 +1,25 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/train.csv
+    outs:
+    - models
+  explore:
+    cmd: python src/exploration.py
+    deps:
+    - data/raw_data.csv
+    outs:
+    - data/cleaned_data.csv
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - data/cleaned_data.csv
+    outs:
+    - data/processed_data.csv
+  optimize:
+    cmd: python src/optimize_optuna.py
+    deps:
+    - data/train.csv
+    outs:
+    - optuna_results.csv
