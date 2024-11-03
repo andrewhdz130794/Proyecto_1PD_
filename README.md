@@ -1,6 +1,9 @@
 # Proyecto AutoML con DVC y Optuna
 
 Este proyecto implementa un pipeline de Machine Learning usando DVC para la gestión de datos y el versionado de modelos, y Optuna/GridSearchCV para la optimización de hiperparámetros.
+## Descargar el Proyecto
+
+La versión congelada del proyecto se puede descargar desde el [release en GitHub](https://github.com/andrewhdz130794/Proyecto_1PD_/releases). 
 
 ## Requisitos Previos
 
@@ -48,19 +51,14 @@ optuna_results.csv: Contiene los mejores hiperparámetros y el MSE obtenido en l
 results.csv: Almacena las métricas de evaluación de los modelos, incluyendo el MSE y el R².
 
 # Estructura del Proyecto
+proyecto_1pd/
+├── data/                       
+├── models/                     
+├── outputs/                    
+├── src/                        
+├── params.yaml                 
+├── dvc.yaml                    
+├── requirements.txt            
+└── README.md                   
 
-proyecto_1PD/
-├── data/                       # Carpeta para los datasets 
-├── models/                     # Carpeta para almacenar los modelos entrenados
-├── outputs/                    # Carpeta para los resultados (opcional)
-├── src/                        # Carpeta para los scripts del pipeline
-│   ├── exploration.py          # Exploración de datos
-│   ├── preprocess.py           # Preprocesamiento de datos
-│   ├── train.py                # Entrenamiento de modelos
-│   ├── evaluate.py             # Evaluación de modelos
-│   └── optimize_optuna.py      # Optimización de hiperparámetros con Optuna
-├── params.yaml                 # Archivo de parámetros para el pipeline
-├── dvc.yaml                    # Archivo que define el pipeline de DVC
-├── requirements.txt            # Lista de dependencias necesarias
-└── README.md                   # Instrucciones para reproducir el proyecto
                
